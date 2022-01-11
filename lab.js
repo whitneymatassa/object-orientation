@@ -165,7 +165,12 @@ totalPopulation(states);
 
 //Code Here
 
+ function ingredients(macros) {
+   let {carb, fat, protein} = macros
+   return [carb, fat, protein]
+ }
 
+console.log(ingredients({carb: 'bread', fat: 'avocado', protein: 'steak'}))
 
 //////////////////////////// PROBLEM 10 ////////////////////////////
 // Do not edit the code below.
