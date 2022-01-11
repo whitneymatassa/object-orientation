@@ -269,7 +269,27 @@ wizard1.castSpell();
     Inside the function, reassign the value of the object's price
     to be newPrice.
 */
+class Phone{
+  constructor(brand, model, storage, color, price){
+    this.brand = brand
+    this.model = model
+    this.storage = storage
+    this.color = color
+    this.price = price
+    this.sold = false
+  }
 
+  sell() {
+    this.sold = true
+    console.log(this.sold)
+    console.log(`${this.brand} ${this.model} has been sold.`)
+  }
+}
+
+let phone1 = new Phone("iphone", "8th generation", "16 gig", "white", "$999")
+console.log(phone1)
+
+phone1.sell();
 //Code Here
 
   
