@@ -189,7 +189,10 @@ var user = {
   name -> 'Bryan G. Smith' and email -> 'bryan.smith@devmounta.in'.
   Make that change without modifying the original object code above.
 */
+user.name = 'Bryan G. Smith'
+user.email = 'bryan.smith@devmounta.in'
 
+console.log(user)
 //Code Here
 
 
