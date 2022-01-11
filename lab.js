@@ -211,7 +211,16 @@ console.log(user)
   Outside of your class, create an instance of your cat, passing in whatever values you would like.
   Print the name of your cat instance using dot notation.
 */
+class Dog {
+  constructor(name, age, color){
+    this.name = name
+    this.age = age
+    this.color = color
+  }
+}
 
+let dog1 = new Dog('Meatloaf', 4, "Golden");
+console.log(dog1)
 //Code here
 
 
