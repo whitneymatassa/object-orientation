@@ -284,15 +284,26 @@ class Phone{
     console.log(this.sold)
     console.log(`${this.brand} ${this.model} has been sold.`)
   }
+
+  changePrice(newPrice) {
+    this.price=newPrice;
+  }
 }
 
 let phone1 = new Phone("iphone", "8th generation", "16 gig", "white", "$999")
 console.log(phone1)
 
 phone1.sell();
-//Code Here
 
-  
+phone1.changePrice("$1000");
+
+console.log(phone1)
+//Code Here
+let phone2 = new Phone ('motorola', 'razor', '500mg', 'black', '$299')
+ 
+let phone3 = new Phone ('tmobile', 'sidekick', '1 gig', 'red', '$200')
+
+let phone4 = new Phone ('nokia', '3310', '1mb', 'silver', '$160')
 /*
     Next make three new phone instances using your class.
     Send in values of your choice. They should match these data types:
