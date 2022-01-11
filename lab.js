@@ -55,7 +55,7 @@ const favoriteThings = {
   band:'Pink Floyd',
   food: 'lobster',
   person: 'Mr. Matassa',
-  book: 'Harry Potter',
+  book: 'Lord of the Rings',
   movie: 'Ex Machina',
   holiday: "Valentine's Day"
 }
@@ -77,7 +77,10 @@ console.log(favoriteThings)
 */
 
 //Code here
+favoriteThings['food'] = 'Chicken Nuggets'
+favoriteThings.book = 'Harry Potter'
 
+console.log(favoriteThings)
 
 //////////////////////////// PROBLEM 6 ////////////////////////////
 
@@ -93,6 +96,14 @@ var carDetails = {
 /*
   Use object destructuring to save the property values from the object carDetails into new variables. 
 */
+//const {color, make, model, year} = car
+let {color} = carDetails
+let {make} = carDetails
+let {model} = carDetails
+let {year} = carDetails
+
+console.log(color, make, model, year)
+
 
 //Code Here
 
@@ -108,13 +119,15 @@ var carDetails = {
 
 function greeting( obj ) {
   //Code Here
+  let {firstName, lastName, title} = obj
   
+ 
   // Do not edit the code below.
   return 'Hello, ' + title + ' ' + firstName + ' ' + lastName + '!';
   // Do not edit the code above.
 }
 
-
+console.log(greeting({title: 'President', firstName: 'Bob', lastName: 'Smith'}))
 
 //////////////////////////// PROBLEM 8 ////////////////////////////
 
@@ -127,9 +140,19 @@ function greeting( obj ) {
 */
 
 //Code Here
+const states = {
+  utah: 4,
+  california: 6,
+  texas: 2,
+  arizona: 5
+}
+  
+function totalPopulation(object) {
+  let {utah, california, texas, arizona} = object
+  console.log(utah + california + texas + arizona)
+}
 
-
-
+totalPopulation(states);
 //////////////////////////// PROBLEM 9 ////////////////////////////
 
 /*
