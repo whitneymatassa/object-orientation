@@ -175,7 +175,6 @@ console.log(ingredients({carb: 'bread', fat: 'avocado', protein: 'steak'}))
 //////////////////////////// PROBLEM 10 ////////////////////////////
 // Do not edit the code below.
 var user = {
-  name: 'Bryan',
   age: 24,
   pwHash: 'U+Ldlngx2BYQk',
   email: 'BryanSmith33@gmail.com',
@@ -211,16 +210,16 @@ console.log(user)
   Outside of your class, create an instance of your cat, passing in whatever values you would like.
   Print the name of your cat instance using dot notation.
 */
-class Dog {
-  constructor(name, age, color){
-    this.name = name
-    this.age = age
-    this.color = color
-  }
-}
+//class Dog {
+  //constructor(name, age, color){
+    //this.name = name
+    //this.age = age
+    //this.color = color
+  //}
+//}
 
-let dog1 = new Dog('Meatloaf', 4, "Golden");
-console.log(dog1)
+//let dog1 = new Dog('Meatloaf', 4, "Golden");
+//console.log(dog1)
 //Code here
 
 
@@ -232,6 +231,19 @@ console.log(dog1)
   Outside of your class, create an instance of your Wizard, passing in whatever values you would like.
   Call the castSpell function on the instance of your wizard.
 */
+class Wizard {
+  constructor(name, age, favoriteSpell){
+    this.name = name
+    this.age = age
+    this.favoriteSpell = favoriteSpell
+  }
+  
+  castSpell() {
+    console.log(this.name,'has cast', this.favoriteSpell);
+  }
+}
+let wizard1 = new Wizard('Lucas', 27, "fireball");
+wizard1.castSpell();
 
 //Code here
 
