@@ -200,7 +200,8 @@ console.log(user)
 /*
   Using the user object above, delete the users age off of the object.
 */
-
+delete user.age
+console.log(user)
 //Code Here
 
 
