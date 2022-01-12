@@ -281,7 +281,7 @@ class Phone{
 
   sell() {
     this.sold = true
-    console.log(this.sold)
+    //console.log(this.sold)
     console.log(`${this.brand} ${this.model} has been sold.`)
   }
 
@@ -299,22 +299,22 @@ phone1.changePrice("$1000");
 
 console.log(phone1)
 //Code Here
+//Next make three new phone instances using your class.
+//Send in values of your choice. They should match these data types:
+//- brand: string
+/////- model: string
+//- storage: number
+///- color: string
+//- price: number
+//*/
+
+//Code Here
 let phone2 = new Phone ('motorola', 'razor', '500mg', 'black', '$299')
  
 let phone3 = new Phone ('tmobile', 'sidekick', '1 gig', 'red', '$200')
 
 let phone4 = new Phone ('nokia', '3310', '1mb', 'silver', '$160')
 /*
-    Next make three new phone instances using your class.
-    Send in values of your choice. They should match these data types:
-    - brand: string
-    - model: string
-    - storage: number
-    - color: string
-    - price: number
-*/
-
-//Code Here
 
 /* 
   Call the changePrice function on one of your phones, 
@@ -322,10 +322,11 @@ let phone4 = new Phone ('nokia', '3310', '1mb', 'silver', '$160')
 
   Then console.log that object to see the price change
 */ 
-
+phone2.changePrice("$400");
+console.log(phone2)
 //Code Here 
-
-
+phone4.sell()
+console.log(phone4.sold);
 /*
   Now call the sell method on one of your other phone objects
 
@@ -353,7 +354,8 @@ const colors = {
 
 //Code Here 
 
-
+const colorsCopy = {...colors};
+console.log(colorsCopy)
 
 /*
  Now use the spread operator to combine the following 2 objects into one. 
@@ -378,7 +380,8 @@ const shippingInfo = {
   zipCode: 85004,
 }
 //do not edit the objects above
-
+helensInfo = {...contactInfo,...shippingInfo};
+console.log(helensInfo)
 //Code Here
 
 
@@ -396,7 +399,17 @@ const shippingInfo = {
   Inside the function, add the number of miles to the object's mileage.
   And finally, print the value of the mileage.
 */
-
+class Vehicle {
+  constructor(capacity, color, mileage) {
+    this.capacity = capacity
+    this.color = color
+    this.mileage = mileage
+  }
+  move(miles) {
+    this.mileage +=  miles
+    console.log(this.mileage)
+  }
+}
 //Code Here 
 
 
@@ -405,7 +418,7 @@ const shippingInfo = {
 */
 
 //Code Here
-
+let myFirstVehicle = new Vehicle(5, 'black', 500)
 
 /* 
   Now we'll create a class that's based off of the vehicle class. 
@@ -414,18 +427,27 @@ const shippingInfo = {
   make sure you require all of the parameters from the Vehicle class as well as 2 
   new ones: make and isCool. (Hint: don't forget to call the super function)
 */
-
+class Motorcycle extends Vehicle {
+  constructor(capacity, color, mileage, make){
+  super(capacity, color, mileage)
+  this.make = make
+  this.isCool = true
+}}
 //Code Here
 
 /*
   Create a Motorcycle using your new class and save it to a variable called myFirstMotorcycle
 */
-
+let myFirstMotorcycle = new Motorcycle(2, "red", 100, "harley")
 //Code Here 
+console.log(myFirstMotorcycle)
+
+myFirstMotorcycle.move(100)
+
 
 /*
   Call the move function on myFirstMotorcycle (don't forget the parameter)
-*/
+*
 
 /*
   Let's make another class based off of Vehicle. 
@@ -452,7 +474,14 @@ const shippingInfo = {
 */
 
 //Code Here
-
+class Boat extends Vehicle {
+  constructor(capacity, color, mileage, name, type, isSea){
+    super(capacity, color, mileage)
+    this.name = name
+    this.type = type
+    this.isSeaworthy = true
+  }
+}
 /*
   Call the checkSeaworthiness method on your new boat
 */
